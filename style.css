@@ -68,7 +68,7 @@ nav {
 
 nav.scrolled {
     background: rgba(15, 25, 35, 0.95);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 25px var(--accent-glow);
 }
 
 .nav-container {
@@ -626,7 +626,7 @@ section {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    background-image: url('about-profile.jpeg');
+    background-image: url('images/about-profile.jpeg');
     background-size: cover;
     background-position: center;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
@@ -1769,6 +1769,99 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Certifications Section Style Rules */
+#certifications {
+    padding: 80px 0;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.cert-card {
+    background:rgba(255, 255, 255, 0.2); 
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.cert-image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.cert-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.cert-card:hover .cert-img {
+    transform: scale(1.03);
+}
+
+.cert-info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.cert-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+    color: #ffffff; /* Use your main text color variable */
+}
+
+.cert-issuer {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color:var(--accent-blue); 
+    margin-bottom: 12px;
+}
+
+.cert-desc {
+    font-size: 0.95rem;
+    color: #ddcdcd;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.cert-link-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background: var(--accent-blue); /* Match your accent color */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
+}
+
+.cert-link-btn:hover {
+    background: var(--accent-blue-dark); /* Darker variant for hover effect */
+}
+
 
 /* Accessibility improvements */
 @media (prefers-reduced-motion: reduce) {
